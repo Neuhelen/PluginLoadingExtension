@@ -1,0 +1,7 @@
+﻿namespace SecondPluginDependency
+{
+    public class NameObject
+    {
+        public string Name { get; set; }
+    }
+}

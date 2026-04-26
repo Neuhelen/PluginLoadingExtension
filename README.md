@@ -7,8 +7,10 @@ DLL validity and security were ensured using whitelisting, cryptograhic hashing,
 
 This project was made in .NET Framework as my final project. The programming language was requested by the collaborating company. 
 
-Should the code be run, it will present errors due to the digital signature files not being included. 
+# How to use the Application
 
-This was done on purpose, as any user must create or receive one or more appropriate digital certificates, place it in their "Trusted Root" digital certificate folder, use the digital certificates to make the digital signature files for the plugins, and place the digital signatures in the appropriate folder(s) of the plugin loading extension. 
+Should the code be run as it is, it will present errors due to the digital signature files not being included. This was intentional, as the DLL files must be validated before they are loaded. 
 
-If the digital certificate(s) is placed in the "Trusted Root", and the digital signatures have been placed in the appropriate folder(s), the application will run successfully. 
+As such, any user must create or receive one or more appropriate digital certificates on the device used to run the application, place it in their "Trusted Root" digital certificate folder, use the digital certificates to make the digital signature files for the plugins, and place the digital signatures in the appropriate folder(s) of the plugin loading extension. 
+
+If the digital certificate(s) is placed in the "Trusted Root" and digital signatures are made using the certifates and the DLL files to be loaded into the application, then all that has to be done is to place the DLL files and digital signature files in "..\PluginLoadingExtension\Presentation\bin\Debug\PluginFolder" and "..\PluginLoadingExtension\Presentation\bin\Debug\SignatureFolder", respectively. If this is done, the application will be able to load the DLL files successfully. 
